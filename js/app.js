@@ -40,8 +40,8 @@ initBurgerMenu(); // Ініціалізація бургер-меню
 // **Скрол хедера**
 // Додає або змінює класи для хедера залежно від положення скролу.
 // Інструкція: https://andreyk1n.github.io/starter-theme-docs/sticky_header.html
-// import { initScrollControlledHeader } from './functions/scrollHeader.js';
-// initScrollControlledHeader(); // Ініціалізація функціоналу
+import { initScrollControlledHeader } from './functions/scrollHeader.js';
+initScrollControlledHeader(); // Ініціалізація функціоналу
 // ==============================================================================================
 
 // ==============================================================================================
