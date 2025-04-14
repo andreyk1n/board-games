@@ -1,11 +1,15 @@
 .footer {
     margin-top: 300px;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
     // TEMP
 
     &__container {
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
         gap: 30px;
+        min-height: 529px;
     }
 
     &__text {
@@ -19,6 +23,7 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        max-width: 70%;
     }
 
     &__col {
