@@ -7,8 +7,7 @@ export function initScrollControlledHeader() {
   const header = document.querySelector('.header');
   window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset;
-    header.classList.toggle('scroll-header', scrollTop > 10);
-    header.style.top = (scrollTop <= 10 || scrollTop < lastScrollTop) ? '0' : '-100px';
+    header.classList.toggle('scrolled', scrollTop > 10);
     lastScrollTop = scrollTop;
   });
 }
