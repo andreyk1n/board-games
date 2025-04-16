@@ -1,15 +1,15 @@
 .footer {
     margin-top: 300px;
-    border-top: 1px solid red;
-    border-bottom: 1px solid red;
-    // TEMP
+    padding: 140px 0 40px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     &__container {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         gap: 30px;
-        min-height: 529px;
+        // min-height: 500px;
     }
 
     &__text {
@@ -23,7 +23,7 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        max-width: 70%;
+        max-width: 80%;
     }
 
     &__col {
@@ -50,6 +50,29 @@
             &:hover {
                 text-decoration: underline;
             }
+        }
+    }
+
+    &__socials {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        &>a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 28px;
+            height: 28px;
+            min-width: 28px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            transition-duration: .5s;
+            &:hover {
+                opacity: .5;
+            }
+        }
+        p {
+            padding-left: 15px;
         }
     }
 }
