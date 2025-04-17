@@ -4,7 +4,8 @@
     position: relative;
     
     @media (max-width: 992px) {
-        background: linear-gradient(to right, #1e0266, #a100f2);
+        background: linear-gradient(to right, hsl(257, 96%, 20%), #a100f2);
+        padding: 50px 0 40px 0;
     }
 
     &__bg {
@@ -119,7 +120,8 @@
         display: flex;
         gap: 12px;
         align-items: center;
-        &>a {
+        flex-wrap: wrap; 
+        & > a {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -129,16 +131,22 @@
             border-radius: 50%;
             border: 1px solid #fff;
             transition-duration: .5s;
+    
             &:hover {
                 opacity: .5;
             }
         }
+    
         p {
-            width: 100%;
+            white-space: normal; 
             padding-left: 15px;
+            
             @media (max-width: 576px) {
+                flex: 1 1 100%; 
                 padding-left: 0;
+                margin-top: 10px; 
             }
         }
     }
+    
 }
