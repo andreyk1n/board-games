@@ -2,6 +2,10 @@
     margin-top: 300px;
     padding: 140px 0 40px 0;
     position: relative;
+    
+    @media (max-width: 992px) {
+        background: linear-gradient(to right, #1e0266, #a100f2);
+    }
 
     &__bg {
         position: absolute;
@@ -11,6 +15,10 @@
         height: 100%;
         object-fit: fill;
         z-index: -1;
+
+        @media (max-width: 992px) {
+            display: none;
+        }
     }
 
     &__container {
@@ -18,7 +26,6 @@
         flex-direction: column;
         justify-content: flex-end;
         gap: 30px;
-        // min-height: 500px;
     }
 
     &__text {
@@ -26,6 +33,16 @@
         display: flex;
         flex-direction: column;
         gap: 30px;
+
+        @media (max-width: 992px) {
+            grid-column: span 3;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 576px) {
+            margin-bottom: 10px;
+        }
     }
 
     &__row {
@@ -40,13 +57,35 @@
         }
     }
 
+    
+    &__nav {
+        @media (max-width: 992px) {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 576px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 
     &__bottom {
         margin-top: 30px;
+
+        @media (max-width: 576px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__company {
         flex-wrap: wrap;
+        @media (max-width: 768px) {
+            margin-top: 20px;
+            justify-content: flex-start;
+            gap: 40px;
+        }
     }
 
     &__col {
@@ -95,7 +134,11 @@
             }
         }
         p {
+            width: 100%;
             padding-left: 15px;
+            @media (max-width: 576px) {
+                padding-left: 0;
+            }
         }
     }
 }
