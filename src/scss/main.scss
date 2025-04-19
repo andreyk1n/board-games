@@ -145,6 +145,11 @@ a:active {
         font-size: 20px;
         font-weight: 700;
         text-transform: uppercase;
+
+        border: 2px solid transparent;
+        border-image: linear-gradient(135deg, #6437ff, #ff00c8, #ff63d4);
+        border-image-slice: 1;
+      
     }
 
     &--inverse {
@@ -192,8 +197,15 @@ ul {
     }
 }
 
-h1 {
-    @include adaptiveValue('font-size', 60px, 24px);
+.title {
+    color: #fff;
+    text-transform: uppercase;
+    span {
+        background: linear-gradient(90deg, #655de4, #a045db, #ff3ebf);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+    }
 }
 
 // Cтилізація ектів статусу для поточної сторінки
@@ -217,3 +229,4 @@ input {
 :-webkit-autofill::first-line {
     font-size: 16px;
 }
+

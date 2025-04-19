@@ -13,4 +13,21 @@
         mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
         -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
     }
+
+    &__title {
+        font-size: clamp(40px, 5vw, 68px);
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        max-width: 530px;
+        gap: 15px;
+    }
+
+    &__buttons {
+        margin-top: 15px;
+        display: flex;
+        gap: 15px;
+    }
 }
