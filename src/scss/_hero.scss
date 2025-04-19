@@ -4,25 +4,42 @@
 .hero {
     width: 100%;
     margin: 0 auto;
+    overflow-x: hidden;
+
+    @media (max-width: 992px) {
+        padding: 120px 0 0 0;
+    }
 
     &__container {
         display: flex;
         align-items: center;
         min-height: 760px;
         position: relative;
+
+        @media (max-width: 992px) {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            min-height: auto;
+        }
     }
 
     &__img {
         position: absolute;
-        right: -100px;
+        right: -160px;
         top: 0;
         width: 100%;
         height: 100%;
         max-width: 800px;
+        opacity: .8;
         max-height: 760px;
         mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
         -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
         z-index: -1;
+        @media (max-width: 992px) {
+            position: static;
+            width: calc(100% + 30px);
+        }
     }
 
     &__title {

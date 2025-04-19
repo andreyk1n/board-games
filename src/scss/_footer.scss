@@ -1,6 +1,8 @@
 .footer {
     padding: 140px 0 40px 0;
     position: relative;
+    max-width: 2000px;
+    margin: 0 auto;
     
     @media (max-width: 992px) {
         background: linear-gradient(to right, hsl(257, 96%, 20%), #a100f2);

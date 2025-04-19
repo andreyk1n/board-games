@@ -140,12 +140,10 @@ a:active {
     &--gradient {
         background: linear-gradient(135deg, #6437ff, #ff00c8, #ff63d4);
         background-size: 200% 200%;
-
         color: #fff;
         font-size: 20px;
         font-weight: 700;
         text-transform: uppercase;
-
         border: 2px solid transparent;
         border-image: linear-gradient(135deg, #6437ff, #ff00c8, #ff63d4);
         border-image-slice: 1;
@@ -181,6 +179,11 @@ a:active {
             left: 200%;
         }
         opacity: .7;
+    }
+
+    @media (max-width: 768px) {
+        padding: 16px 24px;
+        font-size: 16px;
     }
 }
 
