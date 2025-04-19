@@ -3,19 +3,45 @@
 
 .hero {
     width: 100%;
-    min-height: 900px;
+    margin: 0 auto;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        min-height: 760px;
+        position: relative;
+    }
 
     &__img {
+        position: absolute;
+        right: -100px;
+        top: 0;
         width: 100%;
         height: 100%;
         max-width: 800px;
-        max-height: 750px;
+        max-height: 760px;
         mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
         -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+        z-index: -1;
     }
 
     &__title {
         font-size: clamp(40px, 5vw, 68px);
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 341px;
+            height: 341px;
+            display: block;
+            left: -25%;
+            top: -50%;
+            background: #dd00b8;
+            filter: blur(80px);
+            border-radius: 50%;
+            opacity: 0.3;
+            z-index: -1;
+        }
     }
 
     &__text {
@@ -23,6 +49,10 @@
         flex-direction: column;
         max-width: 530px;
         gap: 15px;
+
+        p {
+            line-height: 150%;
+        }
     }
 
     &__buttons {
