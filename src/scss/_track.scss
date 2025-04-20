@@ -1,0 +1,58 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.track {
+    max-width: 2000px;
+    width: 100%;
+    margin: -30px auto 0 auto;
+    transform: rotate(-3deg);
+    overflow: hidden;
+    padding: 15px 0;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    &__wrapper {
+        display: flex;
+        width: 100%;
+    }
+
+    &__content {
+        display: flex;
+        animation: scroll-track 30s linear infinite;
+    }
+
+    &__item {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        flex-shrink: 0; 
+
+        padding: 0 40px;
+
+        p {
+            font-size: clamp(16px, 2vw, 30px);
+            font-weight: bold;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .track__img {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+    }
+}
+
+@keyframes scroll-track {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
