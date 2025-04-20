@@ -1,0 +1,60 @@
+.banner {
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        padding: 60px 0;
+    }
+
+    .banner__container {
+        padding: 40px;
+        margin: 0 15px;
+    }
+
+    &__container {
+        width: 100%;
+        padding: 40px;
+        height: 556px;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-radius: 15px;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    &__img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 725px;
+        height: 639px;
+
+        @media (max-width: 1200px) {
+            width: 625px;
+            height: 539px;
+        }
+    }
+
+    &__text {
+        max-width: 466px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        h2 {
+            font-size: clamp(28px, 5vw, 48px);
+        }
+
+        p {
+            line-height: 150%;
+            margin-bottom: 20px;
+        }
+    }
+
+}
