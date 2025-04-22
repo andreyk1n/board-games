@@ -4,15 +4,21 @@
 .track {
     max-width: 2000px;
     width: 100%;
-    margin: -30px auto 0 auto;
-    transform: rotate(-3deg);
     overflow: hidden;
     padding: 15px 0;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    &--rotate {
+        margin: -30px auto 0 auto;
+        transform: rotate(-3deg);
+    }
+
+    &--blur {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
     &__wrapper {
         display: flex;
