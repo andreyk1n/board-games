@@ -16,6 +16,22 @@
         flex-direction: column;
         align-items: center;
         gap: 40px;
+
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 541px;
+            height: 541px;
+            display: block;
+            left: -25%;
+            bottom: -5%;
+            background: #dd00b8;
+            filter: blur(140px);
+            border-radius: 50%;
+            opacity: 0.3;
+            z-index: -1;
+        }
     }
 
     &__title {
