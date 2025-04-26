@@ -72,9 +72,7 @@
 .swiper-slide {
     flex-shrink: 0;
     width: 100%;
-    max-width: 659px;
     height: 100%;
-    max-height: 418px;
     position: relative;
     transition-property: transform;
     display: block
